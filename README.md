@@ -62,4 +62,4 @@ amigosecreto/
 
 ## 📝 Licencia
 
-Este proyecto está bajo la licencia especificada en el archivo LICENSE.
+Este proyecto está bajo la licencia especificada en el archivo APACHE LICENSE.
