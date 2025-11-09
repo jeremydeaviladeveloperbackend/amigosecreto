@@ -8,23 +8,23 @@ graph TB
         CLIENT[Cliente HTTP]
     end
 
-    subgraph "Capa de Presentacion"
-        CONTROLLER[UserController<br/>@RestController]
+    subgraph "Capa de Presentación"
+        CONTROLLER[UserController ]
     end
 
     subgraph "Capa de Servicio"
-        SERVICE_IF[UserService<br/>Interface]
-        SERVICE_IMPL[UserServiceImpl<br/>@Service]
+        SERVICE_IF[UserService Interface]
+        SERVICE_IMPL[UserServiceImpl ]
     end
 
     subgraph "Capa de Acceso a Datos"
-        DAO[UserDao<br/>JpaRepository]
-        MAPPER[UserMapper<br/>@Mapper MapStruct]
+        DAO[UserDao JpaRepository]
+        MAPPER[UserMapper  MapStruct]
     end
 
     subgraph "Capa de Entidades"
-        USER_ENTITY[User Entity<br/>@Entity]
-        PHONE_ENTITY[Phone Entity<br/>@Entity]
+        USER_ENTITY[User Entity ]
+        PHONE_ENTITY[Phone Entity ]
     end
 
     subgraph "Capa de Modelos/DTOs"
@@ -40,7 +40,7 @@ graph TB
     end
 
     subgraph "Base de Datos"
-        DB[(HSQLDB<br/>In-Memory)]
+        DB[(HSQLDB In-Memory)]
         USERS_TABLE[(USERS Table)]
         PHONES_TABLE[(PHONES Table)]
     end
@@ -55,7 +55,7 @@ graph TB
     MAPPER -->|convierte| USER_RESPONSE
     MAPPER -->|convierte| USER_DTO
     DAO -->|persiste| USER_ENTITY
-    USER_ENTITY -->|@ManyToOne| PHONE_ENTITY
+    USER_ENTITY -->|| PHONE_ENTITY
     DAO -->|JPA| DB
     DB --> USERS_TABLE
     DB --> PHONES_TABLE
@@ -201,7 +201,4 @@ graph LR
 ### Exception Layer
 - **SmartJobException**: Excepción personalizada base.
 - **NonexistentEntityException**: Excepción para entidades no encontradas.
-
-
-
 
