@@ -202,3 +202,4 @@ graph LR
 - **SmartJobException**: Excepción personalizada base.
 - **NonexistentEntityException**: Excepción para entidades no encontradas.
 
+
