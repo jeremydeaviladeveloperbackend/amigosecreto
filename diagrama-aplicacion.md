@@ -8,9 +8,7 @@ graph TB
         CLIENT[Cliente HTTP]
     end
 
-    subgraph "Capa de Presentación"
-        CONTROLLER[UserController<br/>@RestController]
-    end 
+   
     
     subgraph "Capa de Servicio"
         SERVICE_IF[UserService<br/>Interface]
@@ -108,5 +106,6 @@ graph TB
 ### Exception Layer
 - **SmartJobException**: Excepción personalizada base.
 - **NonexistentEntityException**: Excepción para entidades no encontradas.
+
 
 
